@@ -1,12 +1,11 @@
-# Utilisation de l image la plus legere
 FROM	alpine:3.14
 
 # Mise a jour du gestionnaire de paquet + telechargements des outils
 # php7-iconv est necessaire pour acceder a la partie wp-admin
 RUN		apk update
-RUN		apk add --no-cache --quiet --update curl bash vim
-RUN		apk add --no-cache --quiet --update mariadb-client
-RUN		apk add --no-cache --quiet --update php7 php-phar \
+RUN		apk add --no-cache --update curl bash vim
+RUN		apk add --no-cache --update mariadb-client
+RUN		apk add --no-cache --update php7 php-phar \
 			php-json php-curl php-fpm php-mysqli php-iconv
 
 # On cree le dossier "standard"
