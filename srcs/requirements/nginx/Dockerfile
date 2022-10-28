@@ -7,7 +7,6 @@ RUN		apk add --no-cache --update openssl
 
 RUN		mkdir /etc/nginx/ssl
 
-# Generation des certificats et cles au nom du student
 RUN 	openssl req -x509 -nodes \
 	# public key
 	-out /etc/nginx/ssl/rburri.42.fr.crt \	

@@ -2,7 +2,6 @@ FROM	alpine:3.14
 
 RUN		apk update
 
-# Installation de mariadb et mariadb client
 RUN		apk add --no-cache --update mariadb mariadb-client vim
 
 # Creation du dossier pour le daemon
