@@ -14,14 +14,9 @@ RUN 	openssl req -x509 -nodes \
 	-keyout /etc/nginx/ssl/rburri.42.fr.key \
 	-subj "/C=CH/ST=VD/L=Lausanne/O=42/OU=42/CN=rburri.42.fr"
 
-
-
-# Copie sur le container du fichier de configuration pour servir la page qu'on souhaite
 COPY	config/nginx.conf /etc/nginx/http.d/default.conf
 
-# Exposition du seul port autorise par le sujet
 EXPOSE	443
 
-# Lancement de nginx en premier plan et non en background (les logs seront dans /var/log/nginx) 
 # pour que le container ne se stop pas
 CMD	[ "nginx", "-g", "daemon off;" ]
