@@ -28,3 +28,5 @@ fclean	:	clean
 re		:	fclean all
 
 .PHONY : all up down pause unpause clean fclean re
+
+# https://rburri.42.fr/wp-login.php

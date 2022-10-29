@@ -14,9 +14,7 @@ RUN 	openssl req -x509 -nodes \
 	-keyout /etc/nginx/ssl/rburri.42.fr.key \
 	-subj "/C=CH/ST=VD/L=Lausanne/O=42/OU=42/CN=rburri.42.fr"
 
-# Creation du dossier qui va contenir les fichiers de configurations de nginx pour le serveur
-RUN 	mkdir /var/run/nginx
-# !!!!!! ARE YOU SURE???
+
 
 # Copie sur le container du fichier de configuration pour servir la page qu'on souhaite
 COPY	config/nginx.conf /etc/nginx/http.d/default.conf

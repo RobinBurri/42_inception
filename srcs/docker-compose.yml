@@ -6,13 +6,13 @@ volumes:
   mariadb-volume:
     driver: local
     driver_opts:
-      device: /home/malatini/data/database
+      device: /home/rburri/data/database
       type: volume
       o: bind
   wordpress-volume:
     driver: local
     driver_opts:
-      device: /home/malatini/data/wordpress
+      device: /home/rburri/data/wordpress
       type: volume
       o: bind
 

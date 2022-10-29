@@ -1,7 +1,5 @@
-#On va modifier le fichier www.conf pour que ca fonctionne en local comme demande
 target="/etc/php7/php-fpm.d/www.conf"
 
-# On aurait aussi pu reprendre le fichier dans notre dossier config plutot que de fonctionner comme ca
 # Le fichier www.conf est relatif a php-fpm (necessaire communication avec le serveur)
 grep -E "listen = 127.0.0.1" $target > /dev/null 2>&1
 if [ $? -eq 0 ]; then
@@ -29,12 +27,12 @@ if [ ! -f "wp-config.php" ]; then
 	wp plugin update --all
 
 	# Installation de notre theme et "activation"
-	wp theme install twentysixteen --activate
+	wp theme install oceanwp --activate
 
 	wp user create $WP_USER $WP_USER_EMAIL --role=editor --user_pass=$WP_USER_PWD
 
 	# Creation d'un article pour l'example
-	wp post generate --count=5 --post_title="malatini"
+	wp post generate --count=3 --post_title="Inception"
 fi
 
 # On a besoin de ca pour faire tourner wordpress mais aussi pour que le container keep running
