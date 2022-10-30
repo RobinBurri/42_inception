@@ -13,8 +13,6 @@ COPY	./config/create_db.sql /tmp/create_db.sql
 # Copie du script entrypoint sur le container
 COPY	./scripts/entrypoint.sh ./
 
-COPY 	./config/mariadb-server.cnf /etc/my.cnf.d/
-
 RUN 	chmod +x ./entrypoint.sh
 
 # Installation de la base de donnee effective et authentification
