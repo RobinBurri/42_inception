@@ -1,8 +1,8 @@
 FROM	alpine:3.14
 
-RUN		apk update
+RUN		apk update --quiet
 
-RUN		apk add --no-cache  --update mariadb mariadb-client vim
+RUN		apk add --quiet --no-cache  --update mariadb mariadb-client vim
 
 RUN 	mkdir -p /var/lib/mysqld /run/mysqld
 

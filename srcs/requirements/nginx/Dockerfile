@@ -1,9 +1,9 @@
 FROM	alpine:3.14
 
-RUN		apk update
+RUN		apk update --quiet
 
-RUN		apk add --no-cache --update nginx
-RUN		apk add --no-cache --update openssl
+RUN		apk add --quiet --no-cache --update nginx
+RUN		apk add --quiet --no-cache --update openssl
 
 RUN		mkdir /etc/nginx/ssl
 
