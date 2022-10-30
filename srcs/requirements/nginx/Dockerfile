@@ -18,5 +18,5 @@ COPY	config/nginx.conf /etc/nginx/http.d/default.conf
 
 EXPOSE	443
 
-# pour que le container ne se stop pas
+# deamon off to prevent the container from halting
 CMD	[ "nginx", "-g", "daemon off;" ]
