@@ -11,16 +11,3 @@ if [ $? -ne 0 ]; then
 else
 	usr/bin/mysqld_safe --datadir=/var/lib/mysql
 fi
-
-
-# TO Check users in the database:
-
-# mysql -u root -p (puis rentrer root_pwd)
-# SHOW DATABASES;
-# use 'wordpress';
-# SHOW TABLES;
-# SELECT wp_users.display_name FROM wp_users;
-# SELECT *  FROM wp_users;
-
-
-# bash if else???

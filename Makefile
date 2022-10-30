@@ -29,4 +29,12 @@ re		:	fclean all
 
 .PHONY : all up down pause unpause clean fclean re
 
+
 # https://rburri.42.fr/wp-login.php
+
+# TO Check users in the database:
+# sudo docker exec -it mariadb mysql -u root -p (root_secret)
+# SHOW DATABASES;
+# use 'wordpress';
+# SHOW TABLES;
+# SELECT *  FROM wp_users;
