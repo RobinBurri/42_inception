@@ -14,7 +14,7 @@ services:
       context: ./requirements/nginx
     image: nginx_img
     volumes:
-      - /home/rburri/data/wordpress-volume:/var/www/wordpress
+      - wordpress-volume:/var/www/wordpress
     networks:
       - inception-network
     ports:
@@ -27,7 +27,7 @@ services:
       context: ./requirements/mariadb
     image: mariadb_img
     volumes:
-      - /home/rburri/data/mariadb-volume:/var/lib/mysql
+      - mariadb-volume:/var/lib/mysql
     networks:
       - inception-network
     env_file:

@@ -1,7 +1,7 @@
 FROM	alpine:3.14
 
 RUN		apk update --quiet
-RUN		apk add --quiet --no-cache --update curl bash vim
+RUN		apk add --quiet --no-cache --update curl bash
 RUN		apk add --quiet --no-cache --update mariadb-client
 RUN		apk add --quiet --no-cache --update php7 php-phar \
 			php-json php-curl php-fpm php-mysqli php-iconv

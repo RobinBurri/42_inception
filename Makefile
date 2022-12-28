@@ -6,6 +6,8 @@ all		:
 			sudo mkdir -p $(DATA_PATH)
 			sudo mkdir -p $(DATA_PATH)/wordpress
 			sudo mkdir -p $(DATA_PATH)/database
+			sudo chmod 777 $(DATA_PATH)/wordpress
+			sudo chmod 777 $(DATA_PATH)/database
 			sudo chmod 777 /etc/hosts
 			sudo echo "127.0.0.1 rburri.42.fr" >> /etc/hosts
 			sudo echo "127.0.0.1 www.rburri.42.fr" >> /etc/hosts
