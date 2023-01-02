@@ -1,7 +1,6 @@
 DATA_PATH 		= /home/rburri/data
 DC				= cd srcs/ && sudo docker-compose
 
-
 all		:
 			sudo mkdir -p $(DATA_PATH)
 			sudo mkdir -p $(DATA_PATH)/wordpress

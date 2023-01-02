@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 volumes:
   mariadb-volume:
@@ -25,6 +25,7 @@ services:
     container_name: mariadb
     build:
       context: ./requirements/mariadb
+    init: true
     image: mariadb_img
     volumes:
       - mariadb-volume:/var/lib/mysql
@@ -40,6 +41,7 @@ services:
       - mariadb
     build:
       context: ./requirements/wordpress
+    init: true
     image: wordpress_img
     volumes:
       - wordpress-volume:/var/www/wordpress
